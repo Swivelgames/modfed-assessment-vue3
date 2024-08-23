@@ -1,0 +1,17 @@
+{
+	"name": "nodejs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"bootstrap": "./bootstrap.sh",
+		"start": "./start.sh",
+		"preinstall": "npx only-allow pnpm"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@types/node": "^18.0.6"
+	}
+}
