@@ -32,7 +32,7 @@ watch(
 <template>
 	<dialog ref="dialog">
 		<button autoFocus class="close" @click="closeDialog">X</button>
-		Hello!
+		Hello, world!
 	</dialog>
 </template>
 
