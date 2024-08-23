@@ -1,14 +1,18 @@
 <script setup lang="ts">
-	
+	defineProps<{
+		id: string,
+		title: string,
+		price: number,
+	}>();
 </script>
 
 <template>
 	<article>
 		<div>
 			<figure>Product Image</figure>
-			<h1>Product Title</h1>
+			<h1>{{title}}</h1>
 		</div>
-		<b>$20.00</b>
+		<b>${{price}}</b>
 		<footer>
 			<slot />
 		</footer>
@@ -35,8 +39,8 @@
 			flex-direction: row;
 			align-content: center;
 			align-items: center;
-			justify-content: space-between;
 			gap: 20px;
+			flex-basis: 60%;
 		}
 
 		b {

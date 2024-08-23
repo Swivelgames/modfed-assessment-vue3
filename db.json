@@ -1,0 +1,45 @@
+{
+  "cart": [
+    {
+      "id": "80683176-f60a-4f55-8789-d721c160e926",
+      "quantity": 1
+    }
+  ],
+  "products": [
+    {
+      "id": "80683176-f60a-4f55-8789-d721c160e926",
+      "title": "Elegant Black Dress",
+      "description": "A timeless and sophisticated black dress, perfect for any occasion. Made from high-quality materials and featuring a flattering silhouette.",
+      "price": 79.99,
+      "category": "Women's Clothing"
+    },
+    {
+      "id": "209425d8-a922-4249-8c6c-7e793911697c",
+      "title": "Men's Leather Wallet",
+      "description": "A durable and stylish leather wallet, ideal for carrying essentials. Features multiple card slots and a secure money compartment.",
+      "price": 49.99,
+      "category": "Men's Accessories"
+    },
+    {
+      "id": "64689f4c-5d6c-42e8-9b77-275616e43993",
+      "title": "Wireless Bluetooth Headphones",
+      "description": "Experience high-fidelity audio with these wireless Bluetooth headphones. Enjoy crystal-clear sound and a comfortable fit for hours of listening pleasure.",
+      "price": 99.99,
+      "category": "Electronics"
+    },
+    {
+      "id": "d439b93a-0c79-4921-91f1-93f19a946841",
+      "title": "Smartwatch with Fitness Tracker",
+      "description": "Stay connected and track your fitness goals with this advanced smartwatch. Features a vibrant touchscreen display, heart rate monitoring, and GPS tracking.",
+      "price": 199.99,
+      "category": "Wearables"
+    },
+    {
+      "id": "f50e4d3f-03d3-41a9-b3a8-775208a3077a",
+      "title": "High-Performance Laptop",
+      "description": "Power through demanding tasks with this high-performance laptop. Equipped with a powerful processor, ample RAM, and a stunning display.",
+      "price": 1499.99,
+      "category": "Computers"
+    }
+  ]
+}

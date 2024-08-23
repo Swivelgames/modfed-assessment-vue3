@@ -3,6 +3,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
+const { DefinePlugin } = require("webpack");
 
 const printCompilationMessage = require("./compilation.config.js");
 
@@ -77,6 +78,7 @@ module.exports = (_, argv) => ({
       },
       exposes: {
         "./CartDialog": "./src/components/cart-dialog.vue",
+        "./useCartStore": "./src/stores/CartStore.ts",
       },
       shared: require("./package.json").dependencies,
     }),
@@ -84,5 +86,8 @@ module.exports = (_, argv) => ({
       template: "./src/index.html",
     }),
     new Dotenv(),
+		new DefinePlugin({
+			modfeds: JSON.stringify(modfeds),
+		}),
   ],
 });

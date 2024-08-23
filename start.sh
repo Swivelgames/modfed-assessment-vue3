@@ -36,4 +36,7 @@ for d in */; do
 	popd >/dev/null
 done
 
+pnpx json-server -h "0.0.0.0" -p 4200 db.json &
+pids+=($!)
+
 wait_for_any

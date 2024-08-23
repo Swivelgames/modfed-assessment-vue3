@@ -2,6 +2,7 @@ const replitHost = process.env.REPLIT_DEV_DOMAIN;
 
 module.exports = {
 	default: {
+		apihost: `${replitHost}:4200`,
 		shop_global_ui: {
 			internalPort: 8080,
 			externalPort: 3000,

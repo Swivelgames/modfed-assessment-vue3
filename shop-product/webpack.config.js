@@ -74,10 +74,12 @@ module.exports = (_, argv) => ({
       filename: "remoteEntry.js",
       remotes: {
         shop_global_ui: `shop_global_ui@https://${modfeds.shop_global_ui.host}/remoteEntry.js`,
+        shop_cart: `shop_cart@https://${modfeds.shop_cart.host}/remoteEntry.js`,
       },
       exposes: {
         "./ProductCard": "./src/components/product-card.vue",
         "./ProductListItem": "./src/components/product-list-item.vue",
+        "./useProductStore": "./src/stores/ProductStore.ts",
       },
       shared: require("./package.json").dependencies,
     }),

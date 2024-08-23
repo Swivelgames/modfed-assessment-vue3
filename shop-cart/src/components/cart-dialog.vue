@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
+import CartList from "./cart-list";
 
-const dialog = ref(null)
+const dialog = ref(null);
 
 const props = defineProps({
-  open: {
-    type: Boolean,
-    default: false,
-  },
+	open: {
+		type: Boolean,
+		default: false,
+	},
 })
 
 const emit = defineEmits(['update:open', 'close'])
@@ -17,15 +18,15 @@ const closeDialog = () => {
 };
 
 watch(
-  () => props.open,
-  (open) => {
-    if (open) {
-      dialog.value.showModal()
-    } else {
-      dialog.value.close()
-    }
-  }
-)
+	() => props.open,
+	(open) => {
+		if (open) {
+			dialog.value.showModal()
+		} else {
+			dialog.value.close()
+		}
+	}
+);
 </script>
 
 <template>
@@ -36,9 +37,13 @@ watch(
 </template>
 
 <style scoped>
-	dialog .close {
-		position: absolute;
-		top: 0;
-		right: 0;
+	dialog {
+		min-width: 80vw;
+
+		.close {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 	}
 </style>

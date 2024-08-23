@@ -1,18 +1,30 @@
 <script setup lang="ts">
-	const handleClick = () => {
+	import { useCartStore } from "shop_cart/useCartStore";
+
+	const { addToCart } = useCartStore();
+
+	const handleClick = async (id: string) => {
+		await addToCart(id);
 		globalThis.window.location = `https://${modfeds.shop_cart.host}/`;
 	};
+
+	defineProps<{
+		id: string,
+		title: string,
+		description: string,
+		price: number,
+		category?: string,
+	}>();
 </script>
 
 <template>
 	<article>
 		<figure>Product Image</figure>
-		<h1>Product Title</h1>
-		<p>Product Description</p>
-		<b>$20.00</b>
+		<h1>{{title}}</h1>
+		<p>{{description}}</p>
 		<footer>
-			<button @click.prevent.stop="handleClick">Add to Cart</button>
-			<button @click.prevent.stop="handleClick">Buy Now</button>
+			<b>${{price}}</b>
+			<button @click.prevent.stop="handleClick(id)">Add to Cart</button>
 		</footer>
 	</article>
 </template>
@@ -30,26 +42,32 @@
 		min-width: 220px;
 		height: 300px;
 
-		b {
-			font-weight: bold;
-		}
-
 		figure {
 			border: 1px solid #ccc;
 			border-radius: 4px;
 			width: 100%;
-			height: 150px;
+			height: 100px;
 		}
 
 		h1 {
-			font-size: 1.5rem;
+			font-size: 1rem;
 			font-weight: bold;
 			margin: 10px 0;
+		}
+
+		p {
+			margin: 10px 0;
+			font-size: 0.7rem;
+		}
+
+		b {
+			font-weight: bold;
 		}
 
 		footer {
 			display: flex;
 			align-items: center;
+			justify-content: space-between;
 
 			button {
 				background: #224;
