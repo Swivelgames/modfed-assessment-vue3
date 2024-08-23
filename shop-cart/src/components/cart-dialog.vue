@@ -45,5 +45,10 @@ watch(
 			top: 0;
 			right: 0;
 		}
+
+		&::backdrop {
+			background-color: rgb(34 34 68 / 50%);
+			backdrop-filter: blur(1px);
+		}
 	}
 </style>
