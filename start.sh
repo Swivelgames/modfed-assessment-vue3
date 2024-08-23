@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 killall webpack 2>/dev/null
+killall node 2>/dev/null
 
 pids=()
 
@@ -8,6 +9,7 @@ cleanup() {
 	echo "Terminating all processes..."
 	for pid in "${pids[@]}"; do
 		kill -9 "$pid" 2>/dev/null
+		wait "$pid" 2>/dev/null
 	done
 	exit 1
 }
