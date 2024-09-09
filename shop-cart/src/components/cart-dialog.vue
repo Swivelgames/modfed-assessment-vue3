@@ -1,32 +1,31 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-import CartList from "./cart-list";
+	import { ref, watch } from "vue"
 
-const dialog = ref(null);
+	const dialog = ref(null);
 
-const props = defineProps({
-	open: {
-		type: Boolean,
-		default: false,
-	},
-})
+	const props = defineProps({
+		open: {
+			type: Boolean,
+			default: false,
+		},
+	});
 
-const emit = defineEmits(['update:open', 'close'])
+	const emit = defineEmits(['update:open', 'close']);
 
-const closeDialog = () => {
-	emit('update:open', false)
-};
+	const closeDialog = () => {
+		emit('update:open', false)
+	};
 
-watch(
-	() => props.open,
-	(open) => {
-		if (open) {
-			dialog.value.showModal()
-		} else {
-			dialog.value.close()
+	watch(
+		() => props.open,
+		(open) => {
+			if (open) {
+				dialog.value.showModal();
+			} else {
+				dialog.value.close();
+			}
 		}
-	}
-);
+	);
 </script>
 
 <template>

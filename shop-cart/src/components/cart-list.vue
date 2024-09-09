@@ -21,7 +21,7 @@
 				return { ...product, quantity: p.quantity };
 			}
 			return null;
-		}).filter(p => p !== null);
+		}).filter(Boolean);
 	})
 </script>
 
@@ -34,15 +34,7 @@
 			:price="p.price"
 		>
 			QTY:
-
 			{{p.quantity}}
-			<!-- select>
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-			</select -->
-
 			<button>X</button>
 		</ProductListItem>
 

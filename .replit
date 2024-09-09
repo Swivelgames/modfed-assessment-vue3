@@ -18,7 +18,6 @@ ignorePorts = false
 
 [[ports]]
 localPort = 4200
-externalPort = 4200
 
 [[ports]]
 localPort = 8080
