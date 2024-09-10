@@ -28,15 +28,17 @@ wait_for_any() {
 	done
 }
 
-for d in */; do
-	[[ "$d" = "node_modules/" ]] && continue
-	[[ "$d" = "docs/" ]] && continue
+dirs=("shop-global-ui/" "shop-category/" "shop-product/" "shop-cart/")
+
+for d in ${dirs[@]}; do
 	pushd "$d" >/dev/null
 	pnpm start:live &
 	pids+=($!)
 	sleep 3
 	popd >/dev/null
 done
+
+sleep 10
 
 pnpx json-server -h "0.0.0.0" -p 4200 db.json &
 pids+=($!)

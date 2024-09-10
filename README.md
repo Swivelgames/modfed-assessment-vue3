@@ -60,7 +60,6 @@ Next, let's open up at least one Webview to view our modules.
 
 ![webview ports screenshot](docs/webview-ports-screenshot.png)
 
-
 This assessment is designed to progressively test your skills and understanding of Module Federation in Vue3 using Webpack. As you work through the levels, you’ll ramp up from basic UI updates to integrating APIs and solving complex problems. Ready? Let’s go!
 
 ## L1: Setting the Foundation
@@ -114,7 +113,7 @@ Now that the Cart Dialog is fixed and displays static data, let’s integrate so
 
 ### 5. Implement Add to Cart
 
-Let’s use the available composables to implement the `Add to Cart` functionality **on the Product Page** (`:3001`). This task will involve sending a POST request to the cart API to add an item when a user clicks the `Add to Cart` button on the product page.
+Let’s use the available composables to implement the `Add to Cart` functionality **on the Product Page** (`:3002`). This task will involve sending a POST request to the cart API to add an item when a user clicks the `Add to Cart` button on the product page.
 
 > **`TIP`:** Check out the composables that are already available for working with the cart. This is where your backend integration starts!
 
