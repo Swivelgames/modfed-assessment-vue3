@@ -3,13 +3,12 @@
 	import CartDialog from "shop_cart/CartDialog";
 
 	const cartButton = ref(null);
-	const cartDialog = ref(null);
 	const cartOpen = ref(false);
 
 	const toggleCart = () => {
 		cartOpen.value = !cartOpen.value;
 	};
-	
+
 	const homePage = `https://${modfeds.shop_global_ui.host}/`
 	const categoryPage = `https://${modfeds.shop_category.host}/`
 </script>
@@ -28,7 +27,7 @@
 			</nav>
 			<aside>
 				<button @click="toggleCart">Cart</button>
-				<CartDialog v-model:open="cartOpen" ref="cartDialog" />
+				<CartDialog v-model:open="carotpen" />
 				<button>Sign-In</button>
 			</aside>
 		</div>

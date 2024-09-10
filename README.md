@@ -60,6 +60,133 @@ Next, let's open up at least one Webview to view our modules.
 
 ![webview ports screenshot](docs/webview-ports-screenshot.png)
 
+
+This assessment is designed to progressively test your skills and understanding of Module Federation in Vue3 using Webpack. As you work through the levels, you’ll ramp up from basic UI updates to integrating APIs and solving complex problems. Ready? Let’s go!
+
+## L1: Setting the Foundation
+
+We’ll begin with small but essential UI tweaks. These tasks will help you get comfortable with the codebase and start making meaningful improvements.
+
+### 1. Update the Header and Footer
+
+Let’s clean up the text in the header and footer to make them more concise.
+
+- **Header**:
+  - Shorten `Women's Clothes` to `Women's`
+  - Shorten `Men's Clothes` to `Men's`
+- **Footer**:
+  - Remove `Women's` and `Men's` from the beginning of each **_link_** in their respective categories.
+
+> **`TIP`:** Small improvements like these can make a big difference in how users interact with your site. You’re off to a great start!
+
+### 2. Beautify Product Cards and Add Hover States
+
+Let’s improve the look and feel of the product cards. Add some hover states to buttons so users know they’re interactive.
+
+> You’re adding some nice polish here! Keep it up—your UI is already looking better.
+
+---
+
+## L2: Fixing and Enhancing Components
+
+Next, let’s dive into fixing existing components and making them more dynamic.
+
+### 3. Fix the Cart Modal Dialog
+
+The Cart Dialog is currently broken and doesn’t open. Your first task is to fix the mechanism that triggers the dialog, so the user can open and close it properly.
+
+> **`HINT`:** Double-check the event handling for the `Cart` button. Sometimes it’s just a small tweak that can get everything working again!
+
+### 4. Add Static Components to the Cart Dialog
+
+Now that the Cart Dialog can be opened, let’s make it more useful. Add some static components to simulate items in the cart.
+
+- Use the `ProductListItem` component to display static products in the dialog.
+- At the bottom of the dialog, add a static "Subtotal" with a hardcoded price.
+
+> You’re building something functional now! Getting these components into the dialog is a key step toward a fully dynamic cart.
+
+---
+
+## L3: Integrating APIs for Cart Functionality
+
+Now that the Cart Dialog is fixed and displays static data, let’s integrate some real API functionality.
+
+### 5. Implement Add to Cart
+
+Let’s use the available composables to implement the `Add to Cart` functionality **on the Product Page** (`:3001`). This task will involve sending a POST request to the cart API to add an item when a user clicks the `Add to Cart` button on the product page.
+
+> **`TIP`:** Check out the composables that are already available for working with the cart. This is where your backend integration starts!
+
+### 6. Display Cart Items Using API Data
+
+Next, let’s take the static components from L2 and replace them with dynamic data. You’ll need to send a GET request to retrieve the items added to the cart and display them in the Cart Dialog.
+
+> **`HINT`:** Look at the composables you have, and how the static components are structured, then update them to pull in real data from the API. You’re making the cart dynamic!
+
+---
+
+## L4: Connecting APIs to Navigation
+
+You’ve made great progress so far! Now, we’ll extend the API integration into other parts of the application.
+
+### 7. Add Navigation Items to the Backend
+
+Set up a simple API that will serve the navigation items. This will allow us to dynamically manage the items in our header and footer.
+
+> You’re building a flexible, API-driven navigation system—way to go!
+
+### 8. Integrate the Nav Items API
+
+Update the header and footer components to dynamically pull in navigation items from the API you just created. This will make your navigation scalable and easy to maintain.
+
+> **`PRO TIP`:** Think about how the API responses map to the existing navigation structure. Keep the logic clean and simple.
+
+---
+
+## L5: Complex Problem Solving
+
+This is where the challenge gets real! These tasks will test your ability to work with advanced features and tackle more intricate problems.
+
+### 9. Implement Vue Router for Product and Category Pages
+
+Add routing for both product pages and category pages. Ensure users can navigate between pages smoothly, just like in a real-world application.
+
+> **`CHALLENGE ACCEPTED!`:** If you can master routing, you’re well on your way to building complete web applications.
+
+### 10. Share State Between Modules
+
+Sharing state between federated modules is one of the more complex aspects of Module Federation. You’ll need to ensure that state (like cart data) can be shared across different modules to maintain a consistent user experience.
+
+> **`EXPERT MODE`:** You’re almost at the finish line. If you’ve gotten this far, you’re tackling one of the hardest challenges in Module Federation!
+
+---
+
+## Wow! You made it!
+
+Whether you completed L1 or made it all the way to L5, we’re seriously impressed by your progress. Each step you’ve taken has shown off your skills in design, development, and problem-solving.
+
+
+
+
+
+
+<!-- - L1: Update Header and Footer text to be more consistent
+- L1: Beautify Product Cards, Add Hover States to Buttons
+- L2: Fix Cart Modal Dialog
+- L2: Add Static Components to Cart Dialog
+- L3: Implement Add to Cart on Product Page
+- L3: Integrate Cart Dialog with Cart Store
+- L4: Add Navigation Items to backend
+- L4: Integrate Nav Items API into Header and Footer
+- L5: Complex Problem Solving
+  - Vue Router
+    - Product Pages
+    - Category Pages
+  - Sharing State Between Modules
+
+
+
 ## 1. Update the Header
 
 The first step is to update our [Header](shop-global-ui/src/components/header.vue) component. It's a bit crowded right now. We have two navigation items that are a little too verbose:
@@ -277,4 +404,4 @@ We don't have a true router implemented, and currently each of our modules only 
 
 ## Seriously? You finished that too?
 
-It's OK, I don't have a life either. I wrote this in my free time. ![:sweat_smile:](docs/sweat_smile.png)
+It's OK, I don't have a life either. I wrote this in my free time. ![:sweat_smile:](docs/sweat_smile.png) -->
